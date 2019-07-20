@@ -39,8 +39,8 @@
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Judul','name'=>'judul','type'=>'text','validation'=>'required|string|min:3|max:70','width'=>'col-sm-10','placeholder'=>'You can only enter the letter only'];
-			$this->form[] = ['label'=>'Isi','name'=>'isi','type'=>'textarea','validation'=>'required|string|min:5|max:5000','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Judul','name'=>'judul','type'=>'text','validation'=>'required|string|min:3|max:120','width'=>'col-sm-10','placeholder'=>'You can only enter the letter only'];
+			$this->form[] = ['label'=>'Isi','name'=>'isi','type'=>'wysiwyg','validation'=>'required|string|min:5|max:5000','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Kategori','name'=>'kategori','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Gambar','name'=>'gambar','type'=>'upload','validation'=>'required|image|max:3000','width'=>'col-sm-10','help'=>'File types support : JPG, JPEG, PNG, GIF, BMP'];
 			$this->form[] = ['label'=>'Tanggal Berita','name'=>'tanggal_berita','type'=>'date','validation'=>'required|date','width'=>'col-sm-10'];
@@ -48,11 +48,11 @@
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ["label"=>"Judul","name"=>"judul","type"=>"text","required"=>TRUE,"validation"=>"required|string|min:3|max:70","placeholder"=>"You can only enter the letter only"];
-			//$this->form[] = ["label"=>"Isi","name"=>"isi","type"=>"textarea","required"=>TRUE,"validation"=>"required|string|min:5|max:5000"];
-			//$this->form[] = ["label"=>"Kategori","name"=>"kategori","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"Gambar","name"=>"gambar","type"=>"upload","required"=>TRUE,"validation"=>"required|image|max:3000","help"=>"File types support : JPG, JPEG, PNG, GIF, BMP"];
-			//$this->form[] = ["label"=>"Tanggal Berita","name"=>"tanggal_berita","type"=>"date","required"=>TRUE,"validation"=>"required|date"];
+			//$this->form[] = ['label'=>'Judul','name'=>'judul','type'=>'text','validation'=>'required|string|min:3|max:70','width'=>'col-sm-10','placeholder'=>'You can only enter the letter only'];
+			//$this->form[] = ['label'=>'Isi','name'=>'isi','type'=>'wysiwyg','validation'=>'required|string|min:5|max:5000','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Kategori','name'=>'kategori','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Gambar','name'=>'gambar','type'=>'upload','validation'=>'required|image|max:3000','width'=>'col-sm-10','help'=>'File types support : JPG, JPEG, PNG, GIF, BMP'];
+			//$this->form[] = ['label'=>'Tanggal Berita','name'=>'tanggal_berita','type'=>'date','validation'=>'required|date','width'=>'col-sm-10'];
 			# OLD END FORM
 
 			/* 
@@ -326,9 +326,16 @@
 
 	    }
 
+	    public function pageHome() {
+			$index = DB::table('berita')->orderBy('id','desc')->paginate(1);
+			$subberita = DB::table('subberita')->orderBy('id_subberita', 'desc')->get();
+			$video = DB::table('video')->orderBy('id_video', 'desc')->get();
 
+			return view('pages.index', ['index'=>$index, 'subberita'=>$subberita, 'video'=>$video]);
+		}
+		public function pageLihatBerita($id) {
+			$index = DB::table('berita')->where('id', '=', $id)->get();
 
-	    //By the way, you can still create your own method in here... :) 
-
-
+			return view('pages.lihat_berita', ['index'=>$index]);
+		}
 	}

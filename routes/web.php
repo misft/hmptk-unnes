@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'AdminBeritaController@pageHome');
+Route::get('/berita/{id}', 'AdminBeritaController@pageLihatBerita');
+

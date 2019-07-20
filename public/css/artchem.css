@@ -1,0 +1,35 @@
+.article {
+    margin-top: 66px;
+    padding-top: 30px;
+    padding-bottom: 100px;
+}
+@media screen and (max-width: 700px) {
+    .article {
+        margin-top: 0px;
+        padding-top: 66px;
+        padding-bottom: 10px;
+    }
+}
+.module {
+    border-style: solid;
+    border-color: #E6E6EA;
+    border-radius: 10px;
+    border-width: 1px;
+    background-color: #EFEFF1;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    margin-bottom: 20px;
+}
+.ot-circle {
+    font-size: 75px;
+    color: white;
+    transition: all .3s;
+}
+.ot-circle:hover {
+    color: #fed136;
+}
+@media screen and (max-width: 700px) {
+    .jarak {
+        margin-bottom: 40px;
+    }
+}
