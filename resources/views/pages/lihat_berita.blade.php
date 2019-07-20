@@ -1,6 +1,5 @@
 @extends('layouts.default')
 @section('content')
-
 <body>
     <section>
         <div class="latar-lihat-berita container-fluid">

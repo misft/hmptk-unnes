@@ -1,68 +1,63 @@
 @extends('layouts.default')
 @section('content')
+
 <body>
     <div class="latar-lihat-berita container-fluid">
         <div class="article container-fluid">
             <div class="row">
                 <div class="col-md-4 jarak">
-                    <div class="module text-center">
-                        <i class="fa fa-briefcase color1 ot-circle">
-                        </i>
-                        <br>
-                        <p>
-                            PRESS RELEASE
-                        </p>
-                    </div>
+                    <a href="">
+                        <div class="module text-center">
+                            <i class="fa fa-briefcase color1 ot-circle">
+                            </i>
+                            <p>PRESS RELEASE</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-md-4 jarak">
-                    <div class="module text-center">
-                        <i class="fa fa-briefcase color1 ot-circle">
-                        </i>
-                        <br>
-                        <p>
-                            PRESS RELEASE
-                        </p>
-                    </div>
+                    <a href="">
+                        <div class="module text-center">
+                            <i class="fa fa-briefcase color1 ot-circle">
+                            </i>
+                            <p>PRESS RELEASE</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-md-4 jarak">
-                    <div class="module text-center">
-                        <i class="fa fa-briefcase color1 ot-circle">
-                        </i>
-                        <br>
-                        <p>
-                            PRESS RELEASE
-                        </p>
-                    </div>
+                    <a href="">
+                        <div class="module text-center">
+                            <i class="fa fa-briefcase color1 ot-circle">
+                            </i>
+                            <p>PRESS RELEASE</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-md-4 jarak">
-                    <div class="module text-center">
-                        <i class="fa fa-briefcase color1 ot-circle">
-                        </i>
-                        <br>
-                        <p>
-                            PRESS RELEASE
-                        </p>
-                    </div>
+                    <a href="">
+                        <div class="module text-center">
+                            <i class="fa fa-briefcase color1 ot-circle">
+                            </i>
+                            <p>PRESS RELEASE</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-md-4 jarak">
-                    <div class="module text-center">
-                        <i class="fa fa-briefcase color1 ot-circle">
-                        </i>
-                        <br>
-                        <p>
-                            PRESS RELEASE
-                        </p>
-                    </div>
+                    <a href="">
+                        <div class="module text-center">
+                            <i class="fa fa-briefcase color1 ot-circle">
+                            </i>
+                            <p>PRESS RELEASE</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-md-4 jarak">
-                    <div class="module text-center">
-                        <i class="fa fa-briefcase color1 ot-circle">
-                        </i>
-                        <br>
-                        <p>
-                            PRESS RELEASE
-                        </p>
-                    </div>
+                    <a href="">
+                        <div class="module text-center">
+                            <i class="fa fa-briefcase color1 ot-circle">
+                            </i>
+                            <p>PRESS RELEASE</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>

@@ -16,7 +16,7 @@
     .form-alumni {
         background-color: #EFEFF1;
         padding: 20px;
-        border: 1px solid grey;
+        border: 1px solid #EFEFF1;
         border-radius: 10px;
     }
 
@@ -29,9 +29,10 @@
         width: 200px;
     }
 
-    .text-center h2 {
+    .text-center h2{
         font-weight: bold;
     }
+
 </style>
 <section>
     <div class="background-image">
@@ -93,7 +94,6 @@
                             <input class="btn btn-primary" type="submit" value="Submit">
                         </div>
                     </form>
-                    
                 </div>
             </div>
 

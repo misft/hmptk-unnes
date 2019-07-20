@@ -1,8 +1,7 @@
 @extends('layouts.default')
 @section('content')
-
 <body>
-
+    
     <section class="slide">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -12,7 +11,7 @@
             </ol>
             <div class="carousel-inner">
                 @foreach ($slide as $x=>$i)
-                @if ($x == 1)
+                @if ($x == 0)
                     <div class="carousel-item active">
                         <img class="d-block img-fluid w-100" style="background-size:cover;" src="{{asset($i -> slide_gambar)}}" alt="First slide">
                         <div class="carousel-caption d-none d-md-block">
@@ -26,12 +25,6 @@
                     </div>
                 @endif
                 @endforeach
-                {{-- <div class="carousel-item">
-                    <img class="d-block w-100" src="images/download.svg" alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="images/download.svg" alt="Third slide">
-                </div> --}}
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>

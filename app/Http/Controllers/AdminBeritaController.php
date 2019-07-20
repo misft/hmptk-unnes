@@ -42,7 +42,7 @@
 			$this->form = [];
 			$this->form[] = ['label'=>'Judul','name'=>'judul','type'=>'text','validation'=>'required|string|min:3|max:120','width'=>'col-sm-10','placeholder'=>'You can only enter the letter only'];
 			$this->form[] = ['label'=>'Isi','name'=>'isi','type'=>'wysiwyg','validation'=>'required|string|min:5|max:5000','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Kategori','name'=>'kategori','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Kategori','name'=>'kategori','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Gambar','name'=>'gambar','type'=>'upload','validation'=>'required|image|max:3000','width'=>'col-sm-10','help'=>'File types support : JPG, JPEG, PNG, GIF, BMP'];
 			$this->form[] = ['label'=>'Tanggal Berita','name'=>'tanggal_berita','type'=>'date','validation'=>'required|date','width'=>'col-sm-10'];
 			# END FORM DO NOT REMOVE THIS LINE
@@ -328,10 +328,10 @@
 	    }
 
 	    public function pageHome() {
-			$index = DB::table('berita')->orderBy('id','desc')->paginate(1);
+			$index = DB::table('berita')->orderBy('id','desc')->paginate(5);
 			$subberita = DB::table('subberita')->orderBy('id_subberita', 'desc')->get();
 			$video = DB::table('video')->orderBy('id_video', 'desc')->get();
-			$slide = DB::table('slide')->where('kategori', '=', 'Home');
+			$slide = DB::table('slide')->get();
 
 			return view('pages.index', ['index'=>$index, 'subberita'=>$subberita, 
 						'video'=>$video, 'slide'=>$slide]);
