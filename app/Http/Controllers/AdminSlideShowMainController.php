@@ -4,6 +4,7 @@
 	use Request;
 	use DB;
 	use CRUDBooster;
+	use Illuminate\Support\Facades\Storage;
 
 	class AdminSlideShowMainController extends \crocodicstudio\crudbooster\controllers\CBController {
 
@@ -303,7 +304,9 @@
 	    | 
 	    */
 	    public function hook_before_delete($id) {
-	        //Your code here
+			$image = DB::table('slide')->where('id_slide', '=', $id)->first();
+			
+			Storage::delete($image->slide_gambar);
 
 	    }
 
