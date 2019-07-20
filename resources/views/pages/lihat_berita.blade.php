@@ -12,9 +12,10 @@
                         </a>
                     </div>
                     <div class="isi-berita">
+                        {{ csrf_field() }}
                         <h1>{{$i -> judul}}</h1>
                         <p>{{$i -> tanggal_berita}}</p>
-                        <p style="text-align: justify; overflow: hidden">{{strip_tags($i -> isi)}}</p>
+                        <p style="text-align: justify; overflow: hidden">{!!$i -> isi!!}</p>
                     </div>
                     @endforeach
                 </div>

@@ -63,7 +63,7 @@
                                         </a>
                                         <p>{{$i -> tanggal}}</p>
                                         <p>
-                                            {{str_limit(strip_tags($i -> isi), 200)}}
+                                            {{str_limit($i -> isi, 200)}}
                                         </p>
                                     </div>
                                 </div>
