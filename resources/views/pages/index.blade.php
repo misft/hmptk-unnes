@@ -99,18 +99,21 @@
                 <div class="row">
                     <div class="text-center offset-sm-4 col-sm-4">
                         <h1>HUBUNGI KAMI</h1>
-                        <form action="">
+                        <form action="kirim_pesan" method="post">
+                            {{ csrf_field() }}
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Nama">
+                                <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="E-mail">
+                                <input type="text" class="form-control" name="email" id="email" placeholder="E-mail">
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" name="" id="" rows="5"
+                                <textarea class="form-control" name="pesan" id="pesan" rows="5"
                                     placeholder="Isi Pesan"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <div class="form-group">
+                                <input class="btn btn-primary" type="submit" value="Submit">
+                            </div>
                         </form>
                     </div>
                 </div>
