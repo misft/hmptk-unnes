@@ -330,8 +330,10 @@
 			$index = DB::table('berita')->orderBy('id','desc')->paginate(1);
 			$subberita = DB::table('subberita')->orderBy('id_subberita', 'desc')->get();
 			$video = DB::table('video')->orderBy('id_video', 'desc')->get();
+			$slide = DB::table('slide')->where('kategori', '=', 'Home');
 
-			return view('pages.index', ['index'=>$index, 'subberita'=>$subberita, 'video'=>$video]);
+			return view('pages.index', ['index'=>$index, 'subberita'=>$subberita, 
+						'video'=>$video, 'slide'=>$slide]);
 		}
 		public function pageLihatBerita($id) {
 			$index = DB::table('berita')->where('id', '=', $id)->get();

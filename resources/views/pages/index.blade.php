@@ -11,19 +11,27 @@
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="images/download.svg" alt="First slide">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Selamat Datang</h5>
-                        <p>HIMPROTEKKIM UNNES</p>
+                @foreach ($slide as $x=>$i)
+                @if ($x == 1)
+                    <div class="carousel-item active">
+                        <img class="d-block img-fluid w-100" style="background-size:cover;" src="{{asset($i -> slide_gambar)}}" alt="First slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>{{$i -> main_judul}}</h5>
+                            <p>{{$i -> sub_judul}}</p>
+                        </div>
                     </div>
-                </div>
-                <div class="carousel-item">
+                @else
+                    <div class="carousel-item">
+                        <img class="d-block w-100 img-fluid" src="{{$i -> slide_gambar}}" alt="Second slide">
+                    </div>
+                @endif
+                @endforeach
+                {{-- <div class="carousel-item">
                     <img class="d-block w-100" src="images/download.svg" alt="Second slide">
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100" src="images/download.svg" alt="Third slide">
-                </div>
+                </div> --}}
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -76,7 +84,7 @@
                         <h2 class="text-center main-page-title">VIDEO HMPTK</h2>
                         @foreach ($video as $i)
                         <iframe width="100%" height="240" src="{{$i -> link_video}}" frameborder="0"></iframe>
-                    
+
                         @endforeach
 
                         <h2 class="text-center main-page-title">PENGUMUMAN</h2>

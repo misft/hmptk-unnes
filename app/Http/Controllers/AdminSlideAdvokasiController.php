@@ -5,14 +5,14 @@
 	use DB;
 	use CRUDBooster;
 
-	class AdminPesanPengirimController extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminSlideAdvokasiController extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
 
 			# START CONFIGURATION DO NOT REMOVE THIS LINE
-			$this->title_field = "nama_pengirim";
+			$this->title_field = "main_judul";
 			$this->limit = "20";
-			$this->orderby = "id_pesan,desc";
+			$this->orderby = "id_slide,desc";
 			$this->global_privilege = false;
 			$this->button_table_action = true;
 			$this->button_bulk_action = true;
@@ -25,29 +25,29 @@
 			$this->button_filter = true;
 			$this->button_import = false;
 			$this->button_export = false;
-			$this->table = "pesan_pengirim";
+			$this->table = "slide_advokasi";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Pesan","name"=>"id_pesan"];
-			$this->col[] = ["label"=>"Nama Pengirim","name"=>"nama_pengirim"];
-			$this->col[] = ["label"=>"Email Pengirim","name"=>"email_pengirim"];
-			$this->col[] = ["label"=>"Isi Pesan","name"=>"isi_pesan"];
+			$this->col[] = ["label"=>"Main Judul","name"=>"main_judul"];
+			$this->col[] = ["label"=>"Sub Judul","name"=>"sub_judul"];
+			$this->col[] = ["label"=>"Slide Gambar","name"=>"slide_gambar","image"=>true];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Nama Pengirim','name'=>'nama_pengirim','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Email Pengirim','name'=>'email_pengirim','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Isi Pesan','name'=>'isi_pesan','type'=>'textarea','validation'=>'required|string|min:5|max:5000','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Main Judul','name'=>'main_judul','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Sub Judul','name'=>'sub_judul','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Slide Gambar','name'=>'slide_gambar','type'=>'upload','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'Nama Pengirim','name'=>'nama_pengirim','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Email Pengirim','name'=>'email_pengirim','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Isi Pesan','name'=>'isi_pesan','type'=>'textarea','validation'=>'required|string|min:5|max:5000','width'=>'col-sm-10'];
+			//$this->form[] = ["label"=>"Slide","name"=>"id_slide","type"=>"select2","required"=>TRUE,"validation"=>"required|integer|min:0","datatable"=>"slide,main_judul"];
+			//$this->form[] = ["label"=>"Main Judul","name"=>"main_judul","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
+			//$this->form[] = ["label"=>"Sub Judul","name"=>"sub_judul","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
+			//$this->form[] = ["label"=>"Slide Gambar","name"=>"slide_gambar","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
 			# OLD END FORM
 
 			/* 
@@ -320,4 +320,10 @@
 	        //Your code here
 
 	    }
+
+
+
+	    //By the way, you can still create your own method in here... :) 
+
+
 	}

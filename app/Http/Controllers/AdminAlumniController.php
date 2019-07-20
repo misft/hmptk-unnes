@@ -330,11 +330,9 @@
 	    public function hook_after_delete($id) {
 	        //Your code here
 
-	    }
-
-
-
-	    //By the way, you can still create your own method in here... :) 
-
-
+		}
+		
+		public function pageAlumni() {
+			return view('pages.alumni');
+		}
 	}
