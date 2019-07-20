@@ -14,3 +14,5 @@
 Route::get('/', 'AdminBeritaController@pageHome');
 Route::get('/berita/{id}', 'AdminBeritaController@pageLihatBerita');
 
+Route::post('/kirim_pesan', 'AdminPesanPengirimController@postPesan');
+
