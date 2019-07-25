@@ -16,9 +16,9 @@ class MainController extends Controller
         $subberita = DB::table('subberita')->orderBy('id_subberita', 'desc')->get();
         $video = DB::table('video')->orderBy('id_video', 'desc')->get();
         $slide = DB::table('slide')->get();
-        return $hasil[0];
+        return view('pages.index', ['index'=>$hasil, 'subberita'=>$subberita, 
+						'video'=>$video, 'slide'=>$slide]);
     }
-    
     public function article(){
         $article = DB::table('kategori')->get();
 

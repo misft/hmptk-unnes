@@ -41,7 +41,7 @@
                 <form class="form-inline my-2 my-lg-0" method="get" action="/berita/cari">
                     <input class="form-control mr-sm-2" type="search" placeholder="Masukan Kata Kunci"
                         aria-label="Search" name="search">
-                    <button class="btn btn-warning my-2 my-sm-0" type="submit">Cari</button>
+                        <input class="btn btn-warning my-2 my-sm-0" type="submit" value="Cari">
                 </form>
             </div>
         </div>
