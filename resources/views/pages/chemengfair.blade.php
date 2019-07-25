@@ -5,60 +5,17 @@
     <div class="latar-lihat-berita container-fluid">
         <div class="article container-fluid">
             <div class="row">
+                @foreach ($chemeng as $i)
                 <div class="col-md-4 jarak">
-                    <a href="">
-                        <div class="module text-center">
-                            <i class="fa fa-briefcase color1 ot-circle">
-                            </i>
-                            <p>PRESS RELEASE</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4 jarak">
-                    <a href="">
-                        <div class="module text-center">
-                            <i class="fa fa-briefcase color1 ot-circle">
-                            </i>
-                            <p>PRESS RELEASE</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4 jarak">
-                    <a href="">
-                        <div class="module text-center">
-                            <i class="fa fa-briefcase color1 ot-circle">
-                            </i>
-                            <p>PRESS RELEASE</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4 jarak">
-                    <a href="">
-                        <div class="module text-center">
-                            <i class="fa fa-briefcase color1 ot-circle">
-                            </i>
-                            <p>PRESS RELEASE</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4 jarak">
-                    <a href="">
-                        <div class="module text-center">
-                            <i class="fa fa-briefcase color1 ot-circle">
-                            </i>
-                            <p>PRESS RELEASE</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4 jarak">
-                    <a href="">
-                        <div class="module text-center">
-                            <i class="fa fa-briefcase color1 ot-circle">
-                            </i>
-                            <p>PRESS RELEASE</p>
-                        </div>
-                    </a>
-                </div>
+                    <a href="chemengfair/{{$i -> id_chemeng}}">
+                            <div class="module text-center">
+                                <i class="fa fa-briefcase color1 ot-circle">
+                                </i>
+                                <p>{{$i -> nama_chemeng}}</p>
+                            </div>
+                        </a>
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>

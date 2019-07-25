@@ -29,18 +29,18 @@
                             ABOUT
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="aboutus">ABOUT</a>
+                            <a class="dropdown-item" href="/aboutus">ABOUT</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="menu_kabinet.php">KABINET</a>
+                            <a class="dropdown-item" href="/kabinet.php">KABINET</a>
                             <a class="dropdown-item" href="/departemen">DEPARTEMEN</a>
                             <a class="dropdown-item" href="http://tekkim.unnes.ac.id" target="_blank">JURUSAN</a>
                             <a class="dropdown-item" href="/kontak">KONTAK</a>
                         </div>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
+                <form class="form-inline my-2 my-lg-0" method="get" action="/berita/cari">
                     <input class="form-control mr-sm-2" type="search" placeholder="Masukan Kata Kunci"
-                        aria-label="Search">
+                        aria-label="Search" name="search">
                     <button class="btn btn-warning my-2 my-sm-0" type="submit">Cari</button>
                 </form>
             </div>

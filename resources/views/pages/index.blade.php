@@ -40,7 +40,7 @@
         <div class="container">
             <div class="row">
                 <div class="offset-sm-4 col-sm-4 text-center">
-                    <h2 class="main-page-title">PRESS RELEASE</h2>
+                        <h2 class="main-page-title">{{$berita[0] -> kategori}}</h2>
                 </div>
             </div>
         </div>
@@ -71,7 +71,7 @@
                         </article>
 
                         @endforeach
-                        {{$index->links()}}
+                        {{ $index->links() }}
                     </div>
                     <div class="col-sm-4">
                         <h2 class="text-center main-page-title">VIDEO HMPTK</h2>

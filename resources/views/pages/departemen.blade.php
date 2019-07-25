@@ -5,78 +5,17 @@
     <div class="latar-lihat-berita container-fluid">
         <div class="article container-fluid">
             <div class="row">
+                @foreach ($departemen as $i)
                 <div class="col-md-3 jarak">
-                    <a href="">
-                        <div class="module text-center">
-                            <i class="fa fa-briefcase color1 ot-circle">
-                            </i>
-                            <p>PRESS RELEASE</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3 jarak">
-                    <a href="">
-                        <div class="module text-center">
-                            <i class="fa fa-briefcase color1 ot-circle">
-                            </i>
-                            <p>PRESS RELEASE</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3 jarak">
-                    <a href="">
-                        <div class="module text-center">
-                            <i class="fa fa-briefcase color1 ot-circle">
-                            </i>
-                            <p>PRESS RELEASE</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3 jarak">
-                    <a href="">
-                        <div class="module text-center">
-                            <i class="fa fa-briefcase color1 ot-circle">
-                            </i>
-                            <p>PRESS RELEASE</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3 jarak">
-                    <a href="">
-                        <div class="module text-center">
-                            <i class="fa fa-briefcase color1 ot-circle">
-                            </i>
-                            <p>PRESS RELEASE</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3 jarak">
-                    <a href="">
-                        <div class="module text-center">
-                            <i class="fa fa-briefcase color1 ot-circle">
-                            </i>
-                            <p>PRESS RELEASE</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3 jarak">
-                    <a href="">
-                        <div class="module text-center">
-                            <i class="fa fa-briefcase color1 ot-circle">
-                            </i>
-                            <p>PRESS RELEASE</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3 jarak">
-                    <a href="">
-                        <div class="module text-center">
-                            <i class="fa fa-briefcase color1 ot-circle">
-                            </i>
-                            <p>PRESS RELEASE</p>
-                        </div>
-                    </a>
-                </div>
+                        <a href="departemen/{{$i -> id_dept}}">
+                            <div class="module text-center">
+                                <i class="fa fa-briefcase color1 ot-circle">
+                                </i>
+                                <p>{{$i -> nama_dept}}</p>
+                            </div>
+                        </a>
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>
